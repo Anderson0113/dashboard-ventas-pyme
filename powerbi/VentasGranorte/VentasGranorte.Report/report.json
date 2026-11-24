@@ -1,0 +1,318 @@
+{
+  "id": 0,
+  "config": "{\"version\": \"5.57\", \"themeCollection\": {\"baseTheme\": {\"name\": \"CY24SU08\", \"version\": \"5.57\", \"type\": 2}, \"customTheme\": {\"name\": \"TemaPortafolio\", \"version\": \"5.57\", \"type\": 1}}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useNewFilterPaneExperience\": true, \"allowChangeFilterTypes\": true, \"useStylableVisualContainerHeader\": true, \"exportDataMode\": 1, \"useDefaultAggregateDisplayName\": true, \"useEnhancedTooltips\": true}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "name": "SharedResources",
+        "type": 2,
+        "disabled": false,
+        "items": [
+          {
+            "type": 202,
+            "path": "BaseThemes/CY24SU08.json",
+            "name": "CY24SU08"
+          }
+        ]
+      }
+    },
+    {
+      "resourcePackage": {
+        "name": "RegisteredResources",
+        "type": 1,
+        "disabled": false,
+        "items": [
+          {
+            "type": 202,
+            "path": "TemaPortafolio.json",
+            "name": "TemaPortafolio"
+          }
+        ]
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": 0,
+      "name": "Seccion01",
+      "displayName": "Resumen",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 0,
+          "width": 1240,
+          "height": 64,
+          "config": "{\"name\": \"34478dbc47c44c67b6f6\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 1240, \"height\": 64}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Granorte Café · Resumen de ventas\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"Tostadora pyme (empresa ficticia, datos sintéticos) · tarjetas: último año completo frente al anterior\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 80,
+          "z": 0,
+          "width": 300,
+          "height": 110,
+          "config": "{\"name\": \"c1b201a17c464e999906\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 80, \"z\": 0, \"width\": 300, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Ventas (año actual)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Ventas (año actual)\"}, \"Name\": \"Medidas.Ventas (año actual)\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ventas del año'\"}}}}}]}, \"objects\": {\"labels\": [{\"properties\": {\"labelPrecision\": {\"expr\": {\"Literal\": {\"Value\": \"1L\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 335,
+          "y": 80,
+          "z": 0,
+          "width": 300,
+          "height": 110,
+          "config": "{\"name\": \"8058a7736175494a9d9d\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 335, \"y\": 80, \"z\": 0, \"width\": 300, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Var % Ventas (año actual)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Var % Ventas (año actual)\"}, \"Name\": \"Medidas.Var % Ventas (año actual)\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Crecimiento vs. año anterior'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 650,
+          "y": 80,
+          "z": 0,
+          "width": 300,
+          "height": 110,
+          "config": "{\"name\": \"527355e2047a430da27e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 650, \"y\": 80, \"z\": 0, \"width\": 300, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Margen % (año actual)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Margen % (año actual)\"}, \"Name\": \"Medidas.Margen % (año actual)\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Margen bruto %'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 965,
+          "y": 80,
+          "z": 0,
+          "width": 295,
+          "height": 110,
+          "config": "{\"name\": \"5b1bc6d746d646c3a114\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 965, \"y\": 80, \"z\": 0, \"width\": 295, \"height\": 110}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"Medidas.Var Margen pp (año actual)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Var Margen pp (año actual)\"}, \"Name\": \"Medidas.Var Margen pp (año actual)\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Variación del margen'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 0,
+          "width": 600,
+          "height": 495,
+          "config": "{\"name\": \"6a1ffedb5c1d4db4877e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 0, \"width\": 600, \"height\": 495}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Calendario.Inicio de mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Ventas\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Calendario\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Inicio de mes\"}, \"Name\": \"Calendario.Inicio de mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ventas\"}, \"Name\": \"Medidas.Ventas\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ventas por mes'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 635,
+          "y": 205,
+          "z": 0,
+          "width": 625,
+          "height": 340,
+          "config": "{\"name\": \"b66e1048c86f46738710\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 635, \"y\": 205, \"z\": 0, \"width\": 625, \"height\": 340}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Calendario.Inicio de mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Margen %\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Calendario\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Inicio de mes\"}, \"Name\": \"Calendario.Inicio de mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Margen %\"}, \"Name\": \"Medidas.Margen %\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Margen bruto % por mes'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 635,
+          "y": 560,
+          "z": 0,
+          "width": 305,
+          "height": 140,
+          "config": "{\"name\": \"1bf6a68ac78e4245a4a3\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 635, \"y\": 560, \"z\": 0, \"width\": 305, \"height\": 140}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"canales.Canal\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"canales\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Canal\"}, \"Name\": \"canales.Canal\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Canal'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 955,
+          "y": 560,
+          "z": 0,
+          "width": 305,
+          "height": 140,
+          "config": "{\"name\": \"e205fe122dad48fbb6d8\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 955, \"y\": 560, \"z\": 0, \"width\": 305, \"height\": 140}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"productos.Categoría\", \"active\": true}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"productos\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Categoría\"}, \"Name\": \"productos.Categoría\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Categoría'\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "ordinal": 0
+    },
+    {
+      "id": 1,
+      "name": "Seccion02",
+      "displayName": "Canales",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 0,
+          "width": 1240,
+          "height": 64,
+          "config": "{\"name\": \"f525a5e730744b0c9f47\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 1240, \"height\": 64}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Canales\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"La tienda online crece, pero los descuentos le quitan margen\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 80,
+          "z": 0,
+          "width": 760,
+          "height": 380,
+          "config": "{\"name\": \"e47baf6ea0c5403fa8e8\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 80, \"z\": 0, \"width\": 760, \"height\": 380}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Calendario.Inicio de mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Margen %\"}], \"Series\": [{\"queryRef\": \"canales.Canal\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Calendario\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}, {\"Name\": \"t2\", \"Entity\": \"canales\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Inicio de mes\"}, \"Name\": \"Calendario.Inicio de mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Margen %\"}, \"Name\": \"Medidas.Margen %\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t2\"}}, \"Property\": \"Canal\"}, \"Name\": \"canales.Canal\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Margen bruto % por canal'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda Chapinero'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1baf7a'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda Usaquén'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#6250d6'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda El Poblado'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda online'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eda100'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Mayoristas'\"}}}}}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 795,
+          "y": 80,
+          "z": 0,
+          "width": 465,
+          "height": 380,
+          "config": "{\"name\": \"fbc4cbeabf684745b2a5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 795, \"y\": 80, \"z\": 0, \"width\": 465, \"height\": 380}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Calendario.Inicio de mes\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Descuento %\"}], \"Series\": [{\"queryRef\": \"canales.Canal\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Calendario\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}, {\"Name\": \"t2\", \"Entity\": \"canales\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Inicio de mes\"}, \"Name\": \"Calendario.Inicio de mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Descuento %\"}, \"Name\": \"Medidas.Descuento %\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t2\"}}, \"Property\": \"Canal\"}, \"Name\": \"canales.Canal\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Descuento promedio por canal'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda Chapinero'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#1baf7a'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda Usaquén'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#6250d6'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda El Poblado'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Tienda online'\"}}}}}]}}, {\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eda100'\"}}}}}}, \"selector\": {\"data\": [{\"scopeId\": {\"Comparison\": {\"ComparisonKind\": 0, \"Left\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Entity\": \"canales\"}}, \"Property\": \"Canal\"}}, \"Right\": {\"Literal\": {\"Value\": \"'Mayoristas'\"}}}}}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 475,
+          "z": 0,
+          "width": 1240,
+          "height": 225,
+          "config": "{\"name\": \"f1463b112e534047a601\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 475, \"z\": 0, \"width\": 1240, \"height\": 225}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"canales.Canal\"}, {\"queryRef\": \"Medidas.Ventas (año actual)\"}, {\"queryRef\": \"Medidas.Var % Ventas (año actual)\"}, {\"queryRef\": \"Medidas.Margen % (año actual)\"}, {\"queryRef\": \"Medidas.Var Margen pp (año actual)\"}, {\"queryRef\": \"Medidas.Descuento % (año actual)\"}, {\"queryRef\": \"Medidas.Ticket Promedio (año actual)\"}, {\"queryRef\": \"Medidas.Clientes Activos (año actual)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"canales\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Canal\"}, \"Name\": \"canales.Canal\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ventas (año actual)\"}, \"Name\": \"Medidas.Ventas (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Var % Ventas (año actual)\"}, \"Name\": \"Medidas.Var % Ventas (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Margen % (año actual)\"}, \"Name\": \"Medidas.Margen % (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Var Margen pp (año actual)\"}, \"Name\": \"Medidas.Var Margen pp (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Descuento % (año actual)\"}, \"Name\": \"Medidas.Descuento % (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ticket Promedio (año actual)\"}, \"Name\": \"Medidas.Ticket Promedio (año actual)\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Clientes Activos (año actual)\"}, \"Name\": \"Medidas.Clientes Activos (año actual)\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Detalle por canal · 2025 frente a 2024'\"}}}}}]}, \"objects\": {\"total\": [{\"properties\": {\"totals\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "ordinal": 1
+    },
+    {
+      "id": 2,
+      "name": "Seccion03",
+      "displayName": "Productos",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 0,
+          "width": 1240,
+          "height": 64,
+          "config": "{\"name\": \"6bf49b0aaa704668a591\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 1240, \"height\": 64}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Productos: Pareto y clasificación ABC\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"Pocas referencias concentran la mayor parte de las ventas\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 80,
+          "z": 0,
+          "width": 620,
+          "height": 620,
+          "config": "{\"name\": \"18f44da9d1614a77aa65\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 80, \"z\": 0, \"width\": 620, \"height\": 620}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"pareto.Producto\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Ventas Pareto\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"pareto\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Producto\"}, \"Name\": \"pareto.Producto\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ventas Pareto\"}, \"Name\": \"Medidas.Ventas Pareto\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ventas Pareto\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ventas por producto (2024-2025)'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 655,
+          "y": 80,
+          "z": 0,
+          "width": 605,
+          "height": 380,
+          "config": "{\"name\": \"218a6f948861459f9993\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 655, \"y\": 80, \"z\": 0, \"width\": 605, \"height\": 380}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"pareto.Puesto\"}, {\"queryRef\": \"pareto.Producto\"}, {\"queryRef\": \"pareto.Clase ABC\"}, {\"queryRef\": \"Medidas.Ventas Pareto\"}, {\"queryRef\": \"Medidas.Participación acumulada\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"pareto\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Puesto\"}, \"Name\": \"pareto.Puesto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Producto\"}, \"Name\": \"pareto.Producto\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Clase ABC\"}, \"Name\": \"pareto.Clase ABC\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ventas Pareto\"}, \"Name\": \"Medidas.Ventas Pareto\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Participación acumulada\"}, \"Name\": \"Medidas.Participación acumulada\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ranking y clase ABC'\"}}}}}]}, \"objects\": {\"total\": [{\"properties\": {\"totals\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 655,
+          "y": 475,
+          "z": 0,
+          "width": 605,
+          "height": 225,
+          "config": "{\"name\": \"3bb34db2ad744441908f\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 655, \"y\": 475, \"z\": 0, \"width\": 605, \"height\": 225}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"productos.Categoría\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.Margen %\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"productos\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Categoría\"}, \"Name\": \"productos.Categoría\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Margen %\"}, \"Name\": \"Medidas.Margen %\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Margen bruto % por categoría'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "ordinal": 2
+    },
+    {
+      "id": 3,
+      "name": "Seccion04",
+      "displayName": "Clientes RFM",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 0,
+          "width": 1240,
+          "height": 64,
+          "config": "{\"name\": \"499677684dec4ffe9908\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 1240, \"height\": 64}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Clientes: segmentación RFM\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"Recencia, frecuencia y monto · los Campeones son 1 de cada 5 clientes\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 80,
+          "z": 0,
+          "width": 615,
+          "height": 620,
+          "config": "{\"name\": \"e6ba0e56bc8b45a69bc0\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 80, \"z\": 0, \"width\": 615, \"height\": 620}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"rfm_segmentos.Segmento\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.% de ventas 2025 (segmento)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"rfm_segmentos\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Segmento\"}, \"Name\": \"rfm_segmentos.Segmento\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"% de ventas 2025 (segmento)\"}, \"Name\": \"Medidas.% de ventas 2025 (segmento)\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"% de ventas 2025 (segmento)\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'% de las ventas 2025'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 645,
+          "y": 80,
+          "z": 0,
+          "width": 615,
+          "height": 380,
+          "config": "{\"name\": \"76845d0d6d584ff4b7e6\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645, \"y\": 80, \"z\": 0, \"width\": 615, \"height\": 380}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"rfm_segmentos.Segmento\", \"active\": true}], \"Y\": [{\"queryRef\": \"Medidas.% de clientes (segmento)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"rfm_segmentos\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Segmento\"}, \"Name\": \"rfm_segmentos.Segmento\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"% de clientes (segmento)\"}, \"Name\": \"Medidas.% de clientes (segmento)\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"% de clientes (segmento)\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'% de los clientes'\"}}}}}]}, \"objects\": {\"dataPoint\": [{\"properties\": {\"fill\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#9ec5f4'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 645,
+          "y": 475,
+          "z": 0,
+          "width": 615,
+          "height": 225,
+          "config": "{\"name\": \"4f151a81f80e4a5db46b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 645, \"y\": 475, \"z\": 0, \"width\": 615, \"height\": 225}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"rfm_segmentos.Segmento\"}, {\"queryRef\": \"Medidas.Clientes por segmento\"}, {\"queryRef\": \"rfm_segmentos.Días desde la última compra\"}, {\"queryRef\": \"rfm_segmentos.Compras promedio\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"rfm_segmentos\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Segmento\"}, \"Name\": \"rfm_segmentos.Segmento\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Clientes por segmento\"}, \"Name\": \"Medidas.Clientes por segmento\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Días desde la última compra\"}, \"Name\": \"rfm_segmentos.Días desde la última compra\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Compras promedio\"}, \"Name\": \"rfm_segmentos.Compras promedio\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Detalle por segmento'\"}}}}}]}, \"objects\": {\"total\": [{\"properties\": {\"totals\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "ordinal": 3
+    },
+    {
+      "id": 4,
+      "name": "Seccion05",
+      "displayName": "Recomendaciones",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "config": "{}",
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 8,
+          "z": 0,
+          "width": 1240,
+          "height": 64,
+          "config": "{\"name\": \"733f7c1f65db461c962c\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 8, \"z\": 0, \"width\": 1240, \"height\": 64}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Recomendaciones\", \"textStyle\": {\"fontSize\": \"20pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"Impacto estimado en margen bruto anual · escenarios con supuestos explícitos\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 80,
+          "z": 0,
+          "width": 1240,
+          "height": 300,
+          "config": "{\"name\": \"78fa1c2631a94de29efb\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 80, \"z\": 0, \"width\": 1240, \"height\": 300}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"recomendaciones.Recomendación\"}, {\"queryRef\": \"recomendaciones.Margen anual (prudente)\"}, {\"queryRef\": \"recomendaciones.Margen anual (mismo volumen)\"}, {\"queryRef\": \"recomendaciones.Supuesto\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"recomendaciones\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Recomendación\"}, \"Name\": \"recomendaciones.Recomendación\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Margen anual (prudente)\"}, \"Name\": \"recomendaciones.Margen anual (prudente)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Margen anual (mismo volumen)\"}, \"Name\": \"recomendaciones.Margen anual (mismo volumen)\"}, {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Supuesto\"}, \"Name\": \"recomendaciones.Supuesto\"}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Acciones propuestas'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 400,
+          "z": 0,
+          "width": 1240,
+          "height": 200,
+          "config": "{\"name\": \"e83d3b879dfe44689543\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 400, \"z\": 0, \"width\": 1240, \"height\": 200}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Cómo leer\", \"textStyle\": {\"fontSize\": \"13pt\", \"fontWeight\": \"bold\"}}]}, {\"textRuns\": [{\"value\": \"Escenario prudente: incluye la pérdida de volumen esperada por cada acción. Mismo volumen: supone que los clientes compran lo mismo. La decisión real debe validarse con una prueba piloto.\", \"textStyle\": {\"fontSize\": \"11pt\"}}]}]}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "ordinal": 4
+    }
+  ]
+}

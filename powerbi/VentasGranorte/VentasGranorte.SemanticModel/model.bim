@@ -1,0 +1,881 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "es-CO",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-CO",
+    "tables": [
+      {
+        "name": "ventas",
+        "lineageTag": "52980b98-5caa-48fc-b0f2-a72274cc0e84",
+        "columns": [
+          {
+            "name": "id_factura",
+            "dataType": "string",
+            "sourceColumn": "id_factura",
+            "summarizeBy": "none",
+            "lineageTag": "55c17a75-c6a9-4ad9-a4b5-99c5f02ad3ed"
+          },
+          {
+            "name": "linea",
+            "dataType": "int64",
+            "sourceColumn": "linea",
+            "summarizeBy": "none",
+            "lineageTag": "c8e00126-76f7-4148-834d-559519901b15"
+          },
+          {
+            "name": "fecha",
+            "dataType": "dateTime",
+            "sourceColumn": "fecha",
+            "summarizeBy": "none",
+            "lineageTag": "94f3cf4e-24af-43b0-aaf8-291b44a450fc",
+            "formatString": "dd/mm/yyyy"
+          },
+          {
+            "name": "id_cliente",
+            "dataType": "string",
+            "sourceColumn": "id_cliente",
+            "summarizeBy": "none",
+            "lineageTag": "328f78b7-57cc-4ff7-8865-f95249807c6a"
+          },
+          {
+            "name": "id_producto",
+            "dataType": "string",
+            "sourceColumn": "id_producto",
+            "summarizeBy": "none",
+            "lineageTag": "f137d3c7-65cf-465b-84d5-33679e1efb82"
+          },
+          {
+            "name": "id_canal",
+            "dataType": "string",
+            "sourceColumn": "id_canal",
+            "summarizeBy": "none",
+            "lineageTag": "2975a3fa-e776-423e-a631-0bbe9476c55d"
+          },
+          {
+            "name": "cantidad",
+            "dataType": "int64",
+            "sourceColumn": "cantidad",
+            "summarizeBy": "sum",
+            "lineageTag": "17c52eb7-d30d-42d6-a7b3-5a11f63644d9"
+          },
+          {
+            "name": "precio_unitario",
+            "dataType": "int64",
+            "sourceColumn": "precio_unitario",
+            "summarizeBy": "none",
+            "lineageTag": "7ba0694a-7f82-4ef6-8a78-9bc6d9c3568f",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "descuento_pct",
+            "dataType": "double",
+            "sourceColumn": "descuento_pct",
+            "summarizeBy": "none",
+            "lineageTag": "e453ed49-daa9-451a-878f-2e2634f7b74a",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          },
+          {
+            "name": "costo_unitario",
+            "dataType": "int64",
+            "sourceColumn": "costo_unitario",
+            "summarizeBy": "none",
+            "lineageTag": "f19817be-c180-4f1c-823a-c085d3a3c7ca",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "venta_neta",
+            "dataType": "int64",
+            "sourceColumn": "venta_neta",
+            "summarizeBy": "sum",
+            "lineageTag": "c403b2c2-9eb0-414e-b5f0-1ed66d2c42ce",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "costo_total",
+            "dataType": "int64",
+            "sourceColumn": "costo_total",
+            "summarizeBy": "sum",
+            "lineageTag": "c0d85697-2538-49f5-918a-d12ce919062b",
+            "formatString": "\\$ #,0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ventas",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\ventas.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id_factura\", type text}, {\"linea\", Int64.Type}, {\"fecha\", type date}, {\"id_cliente\", type text}, {\"id_producto\", type text}, {\"id_canal\", type text}, {\"cantidad\", Int64.Type}, {\"precio_unitario\", Int64.Type}, {\"descuento_pct\", type number}, {\"costo_unitario\", Int64.Type}, {\"venta_neta\", Int64.Type}, {\"costo_total\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "productos",
+        "lineageTag": "79914d49-8b7e-4d8d-9b2a-bb8882d3db6a",
+        "columns": [
+          {
+            "name": "id_producto",
+            "dataType": "string",
+            "sourceColumn": "id_producto",
+            "summarizeBy": "none",
+            "lineageTag": "93ae30e5-e748-49f7-93cd-3c3766d2e7e1"
+          },
+          {
+            "name": "Producto",
+            "dataType": "string",
+            "sourceColumn": "nombre_producto",
+            "summarizeBy": "none",
+            "lineageTag": "3c48e33b-e9d3-4313-858e-6fc86c161020"
+          },
+          {
+            "name": "Categoría",
+            "dataType": "string",
+            "sourceColumn": "categoria",
+            "summarizeBy": "none",
+            "lineageTag": "a0178c97-1d94-4ae2-b502-a2551b8e329f"
+          },
+          {
+            "name": "Presentación",
+            "dataType": "string",
+            "sourceColumn": "presentacion",
+            "summarizeBy": "none",
+            "lineageTag": "2215d956-7f3a-4fec-8383-95e9ea1fb196"
+          },
+          {
+            "name": "precio_lista_actual",
+            "dataType": "int64",
+            "sourceColumn": "precio_lista_actual",
+            "summarizeBy": "none",
+            "lineageTag": "e3ae3de4-9e1f-4eb0-85db-2f5f25fa86e6",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "costo_unitario_actual",
+            "dataType": "int64",
+            "sourceColumn": "costo_unitario_actual",
+            "summarizeBy": "none",
+            "lineageTag": "78808b8c-d39a-483b-8471-8b3a5df7dd18",
+            "formatString": "\\$ #,0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "productos",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\productos.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id_producto\", type text}, {\"nombre_producto\", type text}, {\"categoria\", type text}, {\"presentacion\", type text}, {\"precio_lista_actual\", Int64.Type}, {\"costo_unitario_actual\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "clientes",
+        "lineageTag": "7b651a69-a5cd-48bf-8e00-24ce3bae38b7",
+        "columns": [
+          {
+            "name": "id_cliente",
+            "dataType": "string",
+            "sourceColumn": "id_cliente",
+            "summarizeBy": "none",
+            "lineageTag": "68c170f7-8cea-4d3b-b7e6-f23686c2599c"
+          },
+          {
+            "name": "Tipo de cliente",
+            "dataType": "string",
+            "sourceColumn": "tipo_cliente",
+            "summarizeBy": "none",
+            "lineageTag": "0ec2c8d3-d0f3-408c-ab9c-ab67b505308a"
+          },
+          {
+            "name": "Ciudad",
+            "dataType": "string",
+            "sourceColumn": "ciudad",
+            "summarizeBy": "none",
+            "lineageTag": "164c4255-c5e0-48f5-857b-a460fa74c896",
+            "dataCategory": "City"
+          },
+          {
+            "name": "id_canal_principal",
+            "dataType": "string",
+            "sourceColumn": "id_canal_principal",
+            "summarizeBy": "none",
+            "lineageTag": "42e87450-700c-4478-b412-7dbcfcb3390c"
+          },
+          {
+            "name": "fecha_primera_compra",
+            "dataType": "dateTime",
+            "sourceColumn": "fecha_primera_compra",
+            "summarizeBy": "none",
+            "lineageTag": "0abe0748-249a-4941-8cb0-2f15155802de",
+            "formatString": "dd/mm/yyyy"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "clientes",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\clientes.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id_cliente\", type text}, {\"tipo_cliente\", type text}, {\"ciudad\", type text}, {\"id_canal_principal\", type text}, {\"fecha_primera_compra\", type date}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "canales",
+        "lineageTag": "7a069352-63ca-4b69-b288-d2491cabd943",
+        "columns": [
+          {
+            "name": "id_canal",
+            "dataType": "string",
+            "sourceColumn": "id_canal",
+            "summarizeBy": "none",
+            "lineageTag": "b873e6a1-4c5e-49be-9bcd-2e5bae239729"
+          },
+          {
+            "name": "Canal",
+            "dataType": "string",
+            "sourceColumn": "canal",
+            "summarizeBy": "none",
+            "lineageTag": "a428c0d8-6707-4c6d-93c9-0f5a2603e8f3"
+          },
+          {
+            "name": "Tipo de canal",
+            "dataType": "string",
+            "sourceColumn": "tipo_canal",
+            "summarizeBy": "none",
+            "lineageTag": "43df7730-d424-4003-ac54-adc9f9259dbd"
+          },
+          {
+            "name": "Ciudad",
+            "dataType": "string",
+            "sourceColumn": "ciudad",
+            "summarizeBy": "none",
+            "lineageTag": "d8f23f55-ec4f-4441-a4bc-662ef733722b"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "canales",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\canales.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id_canal\", type text}, {\"canal\", type text}, {\"tipo_canal\", type text}, {\"ciudad\", type text}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendario",
+        "lineageTag": "51769dea-bc70-4933-98ee-e8595832fe0e",
+        "columns": [
+          {
+            "name": "Fecha",
+            "dataType": "dateTime",
+            "sourceColumn": "Fecha",
+            "summarizeBy": "none",
+            "lineageTag": "6af21dd3-bdf6-411d-ab40-67485f6de9af",
+            "formatString": "dd/mm/yyyy",
+            "isKey": true
+          },
+          {
+            "name": "Año",
+            "dataType": "int64",
+            "sourceColumn": "Año",
+            "summarizeBy": "none",
+            "lineageTag": "e830c295-3089-4b0b-8047-f2243be3ce61"
+          },
+          {
+            "name": "MesNum",
+            "dataType": "int64",
+            "sourceColumn": "MesNum",
+            "summarizeBy": "none",
+            "lineageTag": "a945e1d2-0206-4e13-9425-c70d70994d76",
+            "isHidden": true
+          },
+          {
+            "name": "Mes",
+            "dataType": "string",
+            "sourceColumn": "Mes",
+            "summarizeBy": "none",
+            "lineageTag": "4bb317db-b5a7-4708-aef2-a0b213a184c0",
+            "sortByColumn": "MesNum"
+          },
+          {
+            "name": "Trimestre",
+            "dataType": "string",
+            "sourceColumn": "Trimestre",
+            "summarizeBy": "none",
+            "lineageTag": "09430db7-474f-4c3d-b1d4-89eccf2f1c9d"
+          },
+          {
+            "name": "Inicio de mes",
+            "dataType": "dateTime",
+            "sourceColumn": "Inicio de mes",
+            "summarizeBy": "none",
+            "lineageTag": "5bc4bf29-c8c7-4278-ac15-eacce3e6e30a",
+            "formatString": "mmm yyyy"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendario",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Inicio = #date(2024, 1, 1),",
+                "    Fin = #date(2025, 12, 31),",
+                "    Fechas = List.Dates(Inicio, Duration.Days(Fin - Inicio) + 1, #duration(1, 0, 0, 0)),",
+                "    Tabla = Table.FromList(Fechas, Splitter.SplitByNothing(), {\"Fecha\"}),",
+                "    Tipo = Table.TransformColumnTypes(Tabla, {{\"Fecha\", type date}}),",
+                "    Anio = Table.AddColumn(Tipo, \"Año\", each Date.Year([Fecha]), Int64.Type),",
+                "    MesNum = Table.AddColumn(Anio, \"MesNum\", each Date.Year([Fecha]) * 100 + Date.Month([Fecha]), Int64.Type),",
+                "    NombresMes = {\"ene\", \"feb\", \"mar\", \"abr\", \"may\", \"jun\", \"jul\", \"ago\", \"sep\", \"oct\", \"nov\", \"dic\"},",
+                "    Mes = Table.AddColumn(MesNum, \"Mes\", each NombresMes{Date.Month([Fecha]) - 1} & \"-\" & Text.From(Date.Year([Fecha])), type text),",
+                "    Trimestre = Table.AddColumn(Mes, \"Trimestre\", each Text.From(Date.Year([Fecha])) & \" T\" & Text.From(Date.QuarterOfYear([Fecha])), type text),",
+                "    InicioMes = Table.AddColumn(Trimestre, \"Inicio de mes\", each Date.StartOfMonth([Fecha]), type date)",
+                "in",
+                "    InicioMes"
+              ]
+            }
+          }
+        ],
+        "dataCategory": "Time"
+      },
+      {
+        "name": "pareto",
+        "lineageTag": "6398a088-4451-4308-a466-d87f2cc35619",
+        "columns": [
+          {
+            "name": "id_producto",
+            "dataType": "string",
+            "sourceColumn": "id_producto",
+            "summarizeBy": "none",
+            "lineageTag": "293b6a33-7829-429a-a237-7c35ddd16cc6"
+          },
+          {
+            "name": "Producto",
+            "dataType": "string",
+            "sourceColumn": "nombre_producto",
+            "summarizeBy": "none",
+            "lineageTag": "16b42d57-6e1b-416c-b811-dcce96728a05"
+          },
+          {
+            "name": "Categoría",
+            "dataType": "string",
+            "sourceColumn": "categoria",
+            "summarizeBy": "none",
+            "lineageTag": "3db6bd48-2801-497b-b095-fcf667f53962"
+          },
+          {
+            "name": "venta_neta",
+            "dataType": "double",
+            "sourceColumn": "venta_neta",
+            "summarizeBy": "none",
+            "lineageTag": "00207387-e4a3-40c7-a986-90e7a77d322a",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "Puesto",
+            "dataType": "int64",
+            "sourceColumn": "rank",
+            "summarizeBy": "none",
+            "lineageTag": "6ea1e086-b994-4ad0-a7a1-7cbb75f7528a"
+          },
+          {
+            "name": "pct_productos",
+            "dataType": "double",
+            "sourceColumn": "pct_productos",
+            "summarizeBy": "none",
+            "lineageTag": "489b5fea-6d70-4a65-a9c1-30d28fdafc2f",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          },
+          {
+            "name": "pct_ventas",
+            "dataType": "double",
+            "sourceColumn": "pct_ventas",
+            "summarizeBy": "none",
+            "lineageTag": "79a667ac-41ba-44d5-a9e9-e3b8b8ab924f",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          },
+          {
+            "name": "% ventas acumulado",
+            "dataType": "double",
+            "sourceColumn": "pct_ventas_acum",
+            "summarizeBy": "none",
+            "lineageTag": "5c779f1d-ba1b-4591-9b41-883c6db8513e",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          },
+          {
+            "name": "Clase ABC",
+            "dataType": "string",
+            "sourceColumn": "clase_abc",
+            "summarizeBy": "none",
+            "lineageTag": "2c7160bf-6563-40a6-80d0-7324ba7ad288"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "pareto",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\resultados\\pareto_productos.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id_producto\", type text}, {\"nombre_producto\", type text}, {\"categoria\", type text}, {\"venta_neta\", type number}, {\"rank\", Int64.Type}, {\"pct_productos\", type number}, {\"pct_ventas\", type number}, {\"pct_ventas_acum\", type number}, {\"clase_abc\", type text}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "rfm_segmentos",
+        "lineageTag": "02a76563-4df1-4e86-8b13-9fc4e316e486",
+        "columns": [
+          {
+            "name": "Segmento",
+            "dataType": "string",
+            "sourceColumn": "segmento",
+            "summarizeBy": "none",
+            "lineageTag": "365cbfa3-66fb-4490-b242-9ab2f47db805"
+          },
+          {
+            "name": "clientes",
+            "dataType": "int64",
+            "sourceColumn": "clientes",
+            "summarizeBy": "none",
+            "lineageTag": "e7e72fdb-79ec-47d7-9193-1f6a8478fae8",
+            "formatString": "#,0"
+          },
+          {
+            "name": "ventas_2025",
+            "dataType": "double",
+            "sourceColumn": "ventas_2025",
+            "summarizeBy": "none",
+            "lineageTag": "7a84bb6a-7e7f-4c7f-aead-921617664e0d",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "monto_historico",
+            "dataType": "double",
+            "sourceColumn": "monto_historico",
+            "summarizeBy": "none",
+            "lineageTag": "420cae75-8fad-40d8-bf4c-fbd22020553c",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "Días desde la última compra",
+            "dataType": "double",
+            "sourceColumn": "recencia_media",
+            "summarizeBy": "none",
+            "lineageTag": "54437eb7-8909-4c79-a3e0-0401c9d948d1",
+            "formatString": "0"
+          },
+          {
+            "name": "Compras promedio",
+            "dataType": "double",
+            "sourceColumn": "frecuencia_media",
+            "summarizeBy": "none",
+            "lineageTag": "c0182eaa-867c-4d04-b8fd-bb45a316ab7b",
+            "formatString": "0.0"
+          },
+          {
+            "name": "pct_clientes",
+            "dataType": "double",
+            "sourceColumn": "pct_clientes",
+            "summarizeBy": "none",
+            "lineageTag": "d1c54e0b-2cdc-447e-b80d-9b84dec9b60e",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          },
+          {
+            "name": "pct_ventas_2025",
+            "dataType": "double",
+            "sourceColumn": "pct_ventas_2025",
+            "summarizeBy": "none",
+            "lineageTag": "f562d7d5-0e94-4421-a5f3-0dc11181f459",
+            "formatString": "0.0 %;-0.0 %;0.0 %"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "rfm_segmentos",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\resultados\\rfm_segmentos.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"segmento\", type text}, {\"clientes\", Int64.Type}, {\"ventas_2025\", type number}, {\"monto_historico\", type number}, {\"recencia_media\", type number}, {\"frecuencia_media\", type number}, {\"pct_clientes\", type number}, {\"pct_ventas_2025\", type number}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "recomendaciones",
+        "lineageTag": "fe272808-46dc-47d9-9346-d8ebcfc797ec",
+        "columns": [
+          {
+            "name": "id",
+            "dataType": "int64",
+            "sourceColumn": "id",
+            "summarizeBy": "none",
+            "lineageTag": "3610dcd2-52a4-4c56-8933-47e8dc727f47"
+          },
+          {
+            "name": "Recomendación",
+            "dataType": "string",
+            "sourceColumn": "recomendacion",
+            "summarizeBy": "none",
+            "lineageTag": "66bc2ec4-bea8-4b39-a442-3cc4436295d6"
+          },
+          {
+            "name": "Margen anual (mismo volumen)",
+            "dataType": "double",
+            "sourceColumn": "margen_anual_mismo_volumen",
+            "summarizeBy": "none",
+            "lineageTag": "0a741daa-cea4-41af-aa4e-ffbc035daab1",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "Margen anual (prudente)",
+            "dataType": "double",
+            "sourceColumn": "margen_anual_prudente",
+            "summarizeBy": "none",
+            "lineageTag": "7ab33c68-3a70-48f2-bc41-23d1c0bf964b",
+            "formatString": "\\$ #,0"
+          },
+          {
+            "name": "Supuesto",
+            "dataType": "string",
+            "sourceColumn": "supuesto",
+            "summarizeBy": "none",
+            "lineageTag": "0df820a3-4ac5-45e0-aab5-62a101e0ecc4"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "recomendaciones",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(RutaDatos & \"\\resultados\\recomendaciones.csv\"), [Delimiter = \",\", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars = true]),",
+                "    Tipos = Table.TransformColumnTypes(Encabezados, {{\"id\", Int64.Type}, {\"recomendacion\", type text}, {\"margen_anual_mismo_volumen\", type number}, {\"margen_anual_prudente\", type number}, {\"supuesto\", type text}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Medidas",
+        "lineageTag": "b3cf5d5c-1790-44fe-b96f-15b9463387e4",
+        "columns": [
+          {
+            "name": "_",
+            "dataType": "string",
+            "sourceColumn": "_",
+            "summarizeBy": "none",
+            "lineageTag": "e9eac3fb-7f20-4a2a-8abe-467a3f7a1203",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Medidas",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = #table(type table [_ = text], {})",
+                "in",
+                "    Origen"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Ventas",
+            "expression": "SUM ( ventas[venta_neta] )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Base",
+            "lineageTag": "118d9c9b-a8d0-49c8-8306-5222256ad959"
+          },
+          {
+            "name": "Costo",
+            "expression": "SUM ( ventas[costo_total] )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Base",
+            "lineageTag": "2a98ba65-6e4a-4e7d-8174-2d825b264e77"
+          },
+          {
+            "name": "Margen Bruto",
+            "expression": "[Ventas] - [Costo]",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Base",
+            "lineageTag": "d8a62c0a-d370-4294-8006-f2d94e9c47ce"
+          },
+          {
+            "name": "Margen %",
+            "expression": "DIVIDE ( [Margen Bruto], [Ventas] )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Base",
+            "lineageTag": "9ec1cf59-d26d-4823-95b3-b6fc422115d2"
+          },
+          {
+            "name": "Unidades",
+            "expression": "SUM ( ventas[cantidad] )",
+            "formatString": "#,0",
+            "displayFolder": "Base",
+            "lineageTag": "d173f01e-f0a6-4543-810b-7d133d68487b"
+          },
+          {
+            "name": "Facturas",
+            "expression": "DISTINCTCOUNT ( ventas[id_factura] )",
+            "formatString": "#,0",
+            "displayFolder": "Base",
+            "lineageTag": "47f3937c-b4cd-4d05-b2e7-1ac94abd7edd"
+          },
+          {
+            "name": "Ticket Promedio",
+            "expression": "DIVIDE ( [Ventas], [Facturas] )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Base",
+            "lineageTag": "ee282515-0432-4f8a-9af8-dc207a6ab50a"
+          },
+          {
+            "name": "Clientes Activos",
+            "expression": "DISTINCTCOUNT ( ventas[id_cliente] )",
+            "formatString": "#,0",
+            "displayFolder": "Base",
+            "lineageTag": "f665f30d-bc76-415a-b419-efb06b263043"
+          },
+          {
+            "name": "Venta Bruta",
+            "expression": "SUMX ( ventas, ventas[cantidad] * ventas[precio_unitario] )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Base",
+            "lineageTag": "d28a7be2-b779-46c6-8e8a-1135c1205c68"
+          },
+          {
+            "name": "Descuento %",
+            "expression": "DIVIDE ( [Venta Bruta] - [Ventas], [Venta Bruta] )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Base",
+            "lineageTag": "e8d6bcf8-4d31-42a3-b28d-d42b9988a34b"
+          },
+          {
+            "name": "Ventas AA",
+            "expression": "CALCULATE ( [Ventas], SAMEPERIODLASTYEAR ( Calendario[Fecha] ) )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Comparación",
+            "lineageTag": "5df8eb0f-9cb6-4db0-a260-f0aa3852c860"
+          },
+          {
+            "name": "Var % Ventas AA",
+            "expression": "DIVIDE ( [Ventas] - [Ventas AA], [Ventas AA] )",
+            "formatString": "+0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Comparación",
+            "lineageTag": "77466eb5-324e-4585-934a-72fd066b88c4"
+          },
+          {
+            "name": "Margen % AA",
+            "expression": "CALCULATE ( [Margen %], SAMEPERIODLASTYEAR ( Calendario[Fecha] ) )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Comparación",
+            "lineageTag": "e52487f2-674e-4d8d-bb61-b20e014d5717"
+          },
+          {
+            "name": "Var Margen (pp)",
+            "expression": "( [Margen %] - [Margen % AA] ) * 100",
+            "formatString": "+0.0 \"pp\";-0.0 \"pp\"",
+            "displayFolder": "Comparación",
+            "lineageTag": "5b99bdfc-5e47-4aa1-afb1-1420c5a2b036"
+          },
+          {
+            "name": "Ventas (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Ventas], Calendario[Año] = a )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Año actual",
+            "lineageTag": "10fd71f9-24be-4841-8285-055d043931d2"
+          },
+          {
+            "name": "Var % Ventas (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Var % Ventas AA], Calendario[Año] = a )",
+            "formatString": "+0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Año actual",
+            "lineageTag": "d5bde435-c114-483c-9e02-047d7214cd33"
+          },
+          {
+            "name": "Margen % (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Margen %], Calendario[Año] = a )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Año actual",
+            "lineageTag": "1dd3d18a-42a5-48db-b21b-205349c19c29"
+          },
+          {
+            "name": "Var Margen pp (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Var Margen (pp)], Calendario[Año] = a )",
+            "formatString": "+0.0 \"pp\";-0.0 \"pp\"",
+            "displayFolder": "Año actual",
+            "lineageTag": "5047cbbe-b1fe-4f23-aebe-06dd9d5e23fd"
+          },
+          {
+            "name": "Ticket Promedio (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Ticket Promedio], Calendario[Año] = a )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Año actual",
+            "lineageTag": "06a6bce8-f9aa-4ac8-b01d-2b11612e75f1"
+          },
+          {
+            "name": "Clientes Activos (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Clientes Activos], Calendario[Año] = a )",
+            "formatString": "#,0",
+            "displayFolder": "Año actual",
+            "lineageTag": "99474ba9-6131-464a-ad02-ee3a407f2055"
+          },
+          {
+            "name": "Descuento % (año actual)",
+            "expression": "VAR a = YEAR ( CALCULATE ( MAX ( ventas[fecha] ), ALL ( ventas ), ALL ( Calendario ) ) ) RETURN CALCULATE ( [Descuento %], Calendario[Año] = a )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Año actual",
+            "lineageTag": "891627b3-078c-4d80-8713-7ad693b6a22e"
+          },
+          {
+            "name": "Ventas Pareto",
+            "expression": "SUM ( pareto[venta_neta] )",
+            "formatString": "\\$ #,0",
+            "displayFolder": "Análisis",
+            "lineageTag": "ffea7110-d222-417b-bf70-7019405e986a"
+          },
+          {
+            "name": "Participación acumulada",
+            "expression": "MAX ( pareto[pct_ventas_acum] )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Análisis",
+            "lineageTag": "0c1316cc-3566-4a24-880e-628073d277ee"
+          },
+          {
+            "name": "Clientes por segmento",
+            "expression": "SUM ( rfm_segmentos[clientes] )",
+            "formatString": "#,0",
+            "displayFolder": "Análisis",
+            "lineageTag": "809850cf-0eed-4467-b640-c6e66c95e7f6"
+          },
+          {
+            "name": "% de ventas 2025 (segmento)",
+            "expression": "SUM ( rfm_segmentos[pct_ventas_2025] )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Análisis",
+            "lineageTag": "9ab2c8f5-d623-435c-859a-ecfb7dad2e29"
+          },
+          {
+            "name": "% de clientes (segmento)",
+            "expression": "SUM ( rfm_segmentos[pct_clientes] )",
+            "formatString": "0.0 %;-0.0 %;0.0 %",
+            "displayFolder": "Análisis",
+            "lineageTag": "a3239e39-aa3b-46f2-ac8e-e48320fcda0a"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "b177eef8-0239-4757-a0ed-7eadbae0efba",
+        "fromTable": "ventas",
+        "fromColumn": "id_producto",
+        "toTable": "productos",
+        "toColumn": "id_producto"
+      },
+      {
+        "name": "e29f20bc-86cd-4c64-9643-31693e376677",
+        "fromTable": "ventas",
+        "fromColumn": "id_cliente",
+        "toTable": "clientes",
+        "toColumn": "id_cliente"
+      },
+      {
+        "name": "bb326154-7772-408c-8c39-b430c6297033",
+        "fromTable": "ventas",
+        "fromColumn": "id_canal",
+        "toTable": "canales",
+        "toColumn": "id_canal"
+      },
+      {
+        "name": "49b3d2f1-55b5-4dec-9285-0074b711f158",
+        "fromTable": "ventas",
+        "fromColumn": "fecha",
+        "toTable": "Calendario",
+        "toColumn": "Fecha"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "RutaDatos",
+        "kind": "m",
+        "lineageTag": "37fce928-8c57-482b-b9ed-24640d30343a",
+        "expression": "\"C:\\Users\\lina_\\OneDrive\\Documentos\\Freelance\\Portafolio_Ventas\\datos\" meta [IsParameterQuery = true, Type = \"Text\", IsParameterQueryRequired = true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ]
+  }
+}

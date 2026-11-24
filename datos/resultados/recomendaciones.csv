@@ -1,0 +1,4 @@
+id,recomendacion,margen_anual_mismo_volumen,margen_anual_prudente,supuesto
+1,Limitar el descuento online al 10 %,156444840.0,42815754.0,Anualiza el 2.º semestre de 2025; escenario prudente: las líneas con descuento > 10 % pierden 30 % del volumen
+2,Subir 10 % el precio de Café en grano Huila 500 g,77448106.66666667,50649856.0,Anualiza abr-dic 2025; escenario prudente: el volumen de la referencia cae 8 %
+3,Campaña de reactivación a clientes 'En riesgo',50241768.512707144,50241768.512707144,Se reactiva el 20% de 691 clientes con su gasto anual promedio y el margen de 2025

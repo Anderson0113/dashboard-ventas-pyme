@@ -1,0 +1,6 @@
+id_canal,canal,tipo_canal,ciudad
+C01,Tienda Chapinero,Tienda física,Bogotá
+C02,Tienda Usaquén,Tienda física,Bogotá
+C03,Tienda El Poblado,Tienda física,Medellín
+C04,Tienda online,Online,Nacional
+C05,Mayoristas,Mayorista,Nacional

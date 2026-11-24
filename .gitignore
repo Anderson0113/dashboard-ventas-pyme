@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+# Caché y configuración local de Power BI
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+# Notas personales
+Texto para Workana.md

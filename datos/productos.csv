@@ -1,0 +1,66 @@
+id_producto,nombre_producto,categoria,presentacion,precio_lista_actual,costo_unitario_actual
+P001,Café en grano Huila 500 g,Café en grano,500 g,65000,39680
+P002,Café en grano Huila 250 g,Café en grano,250 g,41200,20210
+P003,Café en grano Huila 1 kg,Café en grano,1 kg,136200,71050
+P004,Café en grano Nariño 250 g,Café en grano,250 g,43500,22720
+P005,Café en grano Nariño 500 g,Café en grano,500 g,78400,41720
+P006,Café en grano Nariño 1 kg,Café en grano,1 kg,143600,67410
+P007,Café en grano Sierra Nevada 250 g,Café en grano,250 g,42300,20580
+P008,Café en grano Sierra Nevada 500 g,Café en grano,500 g,76100,40200
+P009,Café en grano Sierra Nevada 1 kg,Café en grano,1 kg,139600,71370
+P010,Café en grano Tolima 250 g,Café en grano,250 g,37800,18270
+P011,Café en grano Tolima 500 g,Café en grano,500 g,68100,33450
+P012,Café en grano Tolima 1 kg,Café en grano,1 kg,124800,59890
+P013,Café en grano Cauca 250 g,Café en grano,250 g,40100,19060
+P014,Café en grano Cauca 500 g,Café en grano,500 g,72100,34220
+P015,Café en grano Cauca 1 kg,Café en grano,1 kg,132200,70320
+P016,Café en grano Quindío 250 g,Café en grano,250 g,38900,19210
+P017,Café en grano Quindío 500 g,Café en grano,500 g,69800,32700
+P018,Café en grano Quindío 1 kg,Café en grano,1 kg,128200,63870
+P019,Café en grano Santander 250 g,Café en grano,250 g,36600,17730
+P020,Café en grano Santander 500 g,Café en grano,500 g,65800,31500
+P021,Café en grano Santander 1 kg,Café en grano,1 kg,120700,57770
+P022,Café en grano Blend Casa 250 g,Café en grano,250 g,32000,16160
+P023,Café en grano Blend Casa 500 g,Café en grano,500 g,57800,29200
+P024,Café en grano Blend Casa 1 kg,Café en grano,1 kg,105900,55690
+P025,Café molido Huila 250 g,Café molido,250 g,40100,18890
+P026,Café molido Huila 500 g,Café molido,500 g,72100,35960
+P027,Café molido Nariño 250 g,Café molido,250 g,42300,20500
+P028,Café molido Nariño 500 g,Café molido,500 g,76100,37900
+P029,Café molido Tolima 250 g,Café molido,250 g,36600,19410
+P030,Café molido Tolima 500 g,Café molido,500 g,65800,34790
+P031,Café molido Cauca 250 g,Café molido,250 g,38900,20120
+P032,Café molido Cauca 500 g,Café molido,500 g,69800,36200
+P033,Café molido Quindío 250 g,Café molido,250 g,37800,18260
+P034,Café molido Quindío 500 g,Café molido,500 g,68100,34050
+P035,Café molido Blend Casa 250 g,Café molido,250 g,30900,16080
+P036,Café molido Blend Casa 500 g,Café molido,500 g,56100,29020
+P037,Cápsulas Huila x10,Cápsulas,Caja x10,36600,20520
+P038,Cápsulas Nariño x10,Cápsulas,Caja x10,37800,21960
+P039,Cápsulas Blend Casa x10,Cápsulas,Caja x10,32000,18640
+P040,Cápsulas Descafeinado x10,Cápsulas,Caja x10,38900,21180
+P041,Cápsulas Intenso x10,Cápsulas,Caja x10,34300,18920
+P042,Cápsulas Vainilla x10,Cápsulas,Caja x10,35500,19120
+P043,Gotero V60,Métodos de preparación,Unidad,68200,43730
+P044,Chemex 6 tazas,Métodos de preparación,Unidad,252000,154620
+P045,Prensa francesa,Métodos de preparación,Unidad,99800,61800
+P046,Aeropress,Métodos de preparación,Unidad,220500,135060
+P047,Cafetera moka,Métodos de preparación,Unidad,126000,74710
+P048,Sifón japonés,Métodos de preparación,Unidad,346500,227190
+P049,Kalita Wave,Métodos de preparación,Unidad,157500,97410
+P050,Filtros V60 x100,Accesorios,Unidad,23100,13420
+P051,Filtros Chemex x100,Accesorios,Unidad,47200,24750
+P052,Molino manual,Accesorios,Unidad,189000,108730
+P053,Báscula digital,Accesorios,Unidad,126000,66930
+P054,Termo 500 ml,Accesorios,Unidad,89200,47460
+P055,Taza de cerámica,Accesorios,Unidad,36800,20610
+P056,Hervidor cuello de cisne,Accesorios,Unidad,273000,153990
+P057,Kit barista,Accesorios,Unidad,99800,57910
+P058,Espresso,Bebidas en tienda,Bebida,6600,2220
+P059,Americano,Bebidas en tienda,Bebida,7700,2600
+P060,Capuchino,Bebidas en tienda,Bebida,11000,3560
+P061,Latte,Bebidas en tienda,Bebida,12100,3790
+P062,Filtrado V60,Bebidas en tienda,Bebida,13200,3980
+P063,Cold brew,Bebidas en tienda,Bebida,14300,4470
+P064,Mocaccino,Bebidas en tienda,Bebida,13200,4090
+P065,Affogato,Bebidas en tienda,Bebida,15400,4970
